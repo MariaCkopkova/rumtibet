@@ -1,0 +1,48 @@
+.h1 {
+        font-size: remy(50);
+        line-height: 1.5;
+        font-weight: 700;
+        letter-spacing: remy(1);
+}
+.h2 {
+        color: var(--dark);
+        font-family: NunitoSans;
+        font-size: clamp(1.5rem, calc(1.31rem + 0.93vw), 2rem);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: 0;
+}
+.h3 {
+        color: var(--secondary);
+        font-family: NunitoSans;
+        font-size: remy(24);
+        font-weight: 400;
+        line-height: 0.83;
+        letter-spacing: 0;
+        margin-bottom: remy(8);
+}
+.h3-light {
+        color: var(--light);
+        font-family: NunitoSans;
+        font-size: clamp(1.13rem, calc(1.03rem + 0.39vw), 1.5rem);
+        font-weight: 700;
+        line-height: 1.2;
+}
+.h4 {
+        font-size: remy(40);
+        line-height: 1.5;
+        @media (max-width: remy(767)) {
+                line-height: 1.2;
+        }
+}
+
+.h5 {
+        font-size: remy(38);
+}
+
+.accent-span {
+        color: var(--subAc) !important;
+}
+.txt-acc {
+        color: var(--accent);
+}

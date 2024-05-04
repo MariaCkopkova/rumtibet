@@ -1,0 +1,8 @@
+mixin card(title, text, button)
+        li.card.anim-show
+                //-img.photo(src='./img/' + img + '.webp' alt='Img')
+                +picture('kittens')
+                h5 #{title}
+                p #{text}
+                a(href="#!") 
+                        button.btn #{button}

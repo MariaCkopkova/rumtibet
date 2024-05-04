@@ -1,0 +1,47 @@
+.icons-wrapper {
+        padding: remy(30) 0;
+        display: flex;
+        column-gap: remy(30);
+}
+.icon {
+        fill: transparent;
+        stroke: transparent;
+        width: remy(20);
+        height: remy(20);
+}
+.icon--logo {
+        height: remy(72);
+        width: remy(137);
+        fill: white;
+        @media (max-width: remy(576)) {
+                width: remy(84);
+                height: remy(44);
+        }
+}
+
+.icon--arrow-down {
+        width: remy(20);
+        height: remy(20);
+        fill: white;
+        margin-top: remy(-45);
+        margin-left: remy(235);
+}
+.icon--date {
+        stroke: white;
+        width: remy(18);
+        height: remy(18);
+        margin-top: remy(-45);
+        margin-left: remy(235);
+}
+.icon--play {
+        width: remy(50);
+        height: remy(50);
+        //fill: var(--light);
+        //stroke: var(--prime);
+        
+        margin-top: remy(-50);
+}
+.icon--guide, .icon--safety, .icon--loyalty {
+        width: remy(50);
+        height: remy(50);
+}

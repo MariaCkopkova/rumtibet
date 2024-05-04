@@ -1,0 +1,44 @@
+.btn, .btn--section{
+        display: inline-block;
+        text-align: center; /* это если будет ссылка в кнопке а */
+        border-radius: 4px;
+        background-color: var(--prime);
+        color: rgb(247, 247, 252);
+        font-size: remy(16);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: 0.3px;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: 0.3s;
+        flex-shrink: 0;
+        //@media (max-width:remy(767)){
+        //        width: 100%;
+        //        min-width: remy(210);
+        //}
+}       
+.btn {padding: remy(12) remy(24);}
+.btn--section {padding: remy(16) remy(36);}
+.form__btn {
+        background-color: var(--light);
+        min-width: remy(213);
+        height: remy(52);
+        border-radius: remy(4);
+        color: var(--prime);
+        font-size: remy(16);
+        font-weight: 700;
+}
+.btn:hover, .btn--section:hover {
+        background-color: #4b7979;
+}
+.img-price {
+        padding: remy(8) remy(16);
+        font-size: clamp(1.13rem, calc(1.09rem + 0.13vw), 1.25rem);
+        font-weight: 700;
+        line-height: remy(24);
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.3);
+        @media (max-width: remy(1200)){
+                padding: remy(6) remy(10);
+        }
+}

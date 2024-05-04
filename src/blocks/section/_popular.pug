@@ -1,0 +1,50 @@
+mixin popular
+        section.popular
+                .popular__title
+                        .h3 по версии отдыхающих
+                        h2.h2 Популярные направления
+                .popular__img
+                        .img
+                                +picture('popular')
+                                .icon-wrapper
+                                        +svg-stack('star')
+                                        p 4.5
+                                .img__desc
+                                        .img-content
+                                                .h3-light Озеро возле гор
+                                                .img-text
+                                                        p романтическое приключение
+                                        +btn('480 $', 'img-price')
+                        .img
+                                +picture('popular2')
+                                .icon-wrapper
+                                        +svg-stack('star')
+                                        p 4.9
+                                .img__desc
+                                        .img-content
+                                                .h3-light Ночь в горах
+                                                .img-text
+                                                        p в компании друзей
+                                        +btn('500 $', 'img-price')
+                        .img
+                                +picture('popular3')
+                                .icon-wrapper
+                                        +svg-stack('star')
+                                        p 5.0
+                                .img__desc
+                                        .img-content
+                                                .h3-light Йога в горах
+                                                .img-text
+                                                        p для тех, кто забоится о себе
+                                        +btn('230 $', 'img-price')
+                .popular__img--small
+                        #popular.swiper
+                                .swiper-wrapper
+                                .swiper-slide Slide 1
+                                .swiper-slide Slide 2
+                                .swiper-slide Slide 3
+                                .swiper-slide Slide 1
+                                .swiper-slide Slide 2
+                                .swiper-slide Slide 3
+                                .swiper-pagination
+                +btn('Рейтинг направлений', 'btn--section')

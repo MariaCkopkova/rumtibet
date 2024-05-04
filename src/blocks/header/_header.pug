@@ -1,0 +1,43 @@
+mixin header
+        .header
+                .container
+                        .header-top
+                                a.logo(href="#!")
+                                        +svg('logo')
+                                nav.nav(id='header-menu')
+                                        a.nav-item(href='#!') Главная   
+                                        a(href='#!') Про гида
+                                        a(href='#!') Программа тура
+                                        a(href='#!') Стоимость
+                                        a(href='#!') Блог
+                                        a(href='#!') Контакты
+                                        a.nav-btn(href="#!") 
+                                                +btn('Консультация', 'btn')
+                                button.menu-toggle(id='menu-toggle')
+                                        span
+                        .header-content
+                                h1 Насладись прогулкой в горах #[br]с командой единомышленников
+                        .header-content--small
+                                h2 Насладись #[br]прогулкой в горы#[br]с командой единомышленников
+                        .header-bottom
+                                form(action="#").form
+                                        label.form__label
+                                                input#autoComplete.form__input(type='text' placeholder='Локации для тура' autocomplete='off')
+                                                svg.icon.icon--arrow-down
+                                                        use(href='/img/svgsprite/sprite.symbol.svg#arrow-down') 
+                                                span выберите из списка
+                                        label.form__label
+                                                input#datepicker.form__input(type='text' placeholder='Дата похода' autocomplete='off')
+                                                svg.icon.icon--date
+                                                        use(href='/img/svgsprite/sprite.symbol.svg#date') 
+                                                span укажите диапазон
+                                        label.form__label
+                                                input.form__input(type='number' placeholder='Участники' autocomplete='off')
+                                                svg.icon.icon--arrow-down
+                                                        use(href='/img/svgsprite/sprite.symbol.svg#arrow-down')
+                                                span Минимум 4 человека
+                                        a(href="#!") 
+                                                +btn('Найти программу', 'form__btn')
+                                a.btn-small(href="#!") 
+                                                +btn('Найти программу', 'form__btn')
+                                

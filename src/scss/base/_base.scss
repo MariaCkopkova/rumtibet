@@ -1,0 +1,31 @@
+@function remy($pxsize) {
+        @return calc(($pxsize/16)) + rem;
+}
+body,
+html {
+        height: 100%;
+        font-family: NunitoSans;
+        font-weight: 700;
+        color: var(--dark);
+}
+.container {
+        max-width: remy(1210);
+        padding-inline: remy(15);
+        margin: 0 auto;
+}
+.main {
+        flex-grow: 1;
+}
+
+picture {
+        display: block;
+        max-width: 100%;
+        height: auto;
+}
+@media (max-width: remy(576)) {
+        .middle-btn {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+        }
+}

@@ -1,0 +1,15 @@
+include ../../blocks/blocks
+include ../../blocks/libs/_libs
+block variables
+- var siteTitle = 'РумТибет'
+doctype html
+html(lang="en")
+        head
+                meta(charset="UTF-8")
+                meta(name="viewport", content="width=device-width, initial-scale=1.0")
+                include _head
+                title #{siteTitle}
+        body
+                .wrapper
+                        block content
+                include _scripts

@@ -1,0 +1,12 @@
+//-mixin btn(text="Button", cls, type='button')
+//-        button.btn(type=`${type}` class= `btn-${cls}`)= text
+        
+mixin btn(text="Button", cls, type='button')
+        button(type=`${type}` class= `${cls}`)= text
+
+//-mixin btn(text="Button", cls='', type='button')
+//-        button.btn(type=`${type}` class= `${cls}`)= text
+//-mixin btn-out(text="Button", cls='', type='button')
+//-        button.btn-outline(type=`${type}` class= `${cls}`)= text
+
+
