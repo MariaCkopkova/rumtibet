@@ -1,26 +1,39 @@
 const gulp = require('gulp');
+const replace = require('gulp-replace');
 const pugs = require("gulp-pug");
+
+//HTML
 const fileInclude = require('gulp-file-include');
+const htmlclean = require('gulp-htmlclean');
+const webpHTML = require('gulp-webp-retina-html');
+const typograf = require('gulp-typograf');
+
+
+//SASS
 const sass = require('gulp-sass')(require('sass'));
 const sassGlob = require('gulp-sass-glob');
+
+
 const server = require('gulp-server-livereload');
 const clean = require('gulp-clean');
 const fs = require('fs');
 const sourceMaps = require('gulp-sourcemaps');
+const groupMedia = require('gulp-group-css-media-queries');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const webpack = require('webpack-stream');
 const babel = require('gulp-babel');
-const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
-const typograf = require('gulp-typograf');
-const svgsprite = require('gulp-svg-sprite');
-const replace = require('gulp-replace');
-const webpHTML = require('gulp-webp-retina-html');
+
+//Images
+const imagemin = require('gulp-imagemin');
 const imageminWebp = require('imagemin-webp');
 const rename = require('gulp-rename');
 const prettier = require('@bdchauvette/gulp-prettier');
 const imageminAvif = require('imagemin-avif');
+
+// SVG
+const svgsprite = require('gulp-svg-sprite');
 
 
 gulp.task('clean:dev', function (done) {
@@ -98,6 +111,7 @@ gulp.task('html:dev', function () {
 		)
 		.pipe(gulp.dest('./build/'));
 });
+
 gulp.task("pug:dev", function () {
 	return gulp
 		.src("./src/pug/pages/**/*.pug")
@@ -119,12 +133,6 @@ gulp.task('sass:dev', function () {
 		.pipe(sourceMaps.init())
 		.pipe(sassGlob())
 		.pipe(sass())
-		//.pipe(
-		//	replace(
-		//		/(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
-		//		'$1$2$3$4$6$1'
-		//	)
-		//)
 		.pipe(sourceMaps.write())
 		.pipe(gulp.dest('./build/css/'));
 });

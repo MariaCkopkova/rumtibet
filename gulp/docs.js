@@ -19,7 +19,6 @@ const server = require('gulp-server-livereload');
 const clean = require('gulp-clean');
 const fs = require('fs');
 const sourceMaps = require('gulp-sourcemaps');
-const groupMedia = require('gulp-group-css-media-queries');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const webpack = require('webpack-stream');
@@ -30,6 +29,7 @@ const changed = require('gulp-changed');
 const imagemin = require('gulp-imagemin');
 const imageminWebp = require('imagemin-webp');
 const rename = require('gulp-rename');
+const imageminAvif = require('imagemin-avif');
 
 // SVG
 const svgsprite = require('gulp-svg-sprite');
@@ -56,58 +56,19 @@ const plumberNotify = (title) => {
 		}),
 	};
 };
-gulp.task('html:docs', function () {
+
+
+gulp.task("pug:docs", function () {
 	return gulp
-		.src('./src/*.pug')
+		.src("./src/pug/pages/**/*.pug")
 		.pipe(changed('./docs/'))
-		.pipe(plumber(plumberNotify('PUG')))
-		.pipe(fileInclude(fileIncludeSetting))
-		.pipe(gulp.dest('./docs/'));
-});
-gulp.task('pug:docs', function () {
-	return gulp
-		.src('./src/pug/pages/**/*.pug')
-		.pipe(changed('./docs/'))
-		.pipe(plumber(plumberNotify('PUG')))
+		.pipe(plumber(plumberNotify("PUG")))
 		.pipe(
 			pugs({
 				pretty: true,
 			})
 		)
-		.pipe(
-			replace(/<img(?:.|\n|\r)*?>/g, function (match) {
-				return match
-					.replace(/\r?\n|\r/g, '')
-					.replace(/\s{2,}/g, ' ');
-			})
-		) //удаляет лишние пробелы и переводы строк внутри тега <img>
-		.pipe(
-			replace(
-				/(?<=src=|href=|srcset=)(['"])(\.(\.)?\/)*(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
-				'$1./$4$5$7$1'
-			)
-		)
-		.pipe(
-			typograf({
-				locale: ['ru', 'en-US'],
-				htmlEntity: { type: 'digit' },
-				safeTags: [
-					['<\\?php', '\\?>'],
-					['<no-typography>', '</no-typography>'],
-				],
-			})
-		)
-		.pipe(
-			webpHTML({
-				extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp'],
-				retina: {
-					1: '',
-					2: '@2x',
-				},
-			})
-		)
-		.pipe(htmlclean())
-		.pipe(gulp.dest('./docs/'));
+		.pipe(gulp.dest("./docs/"));
 });
 
 gulp.task('html:docs', function () {
@@ -160,59 +121,44 @@ gulp.task('html:docs', function () {
 });
 
 gulp.task('sass:docs', function () {
-	return (
-		gulp
-			.src('./src/scss/*.scss')
-			.pipe(changed('./docs/css/'))
-			.pipe(plumber(plumberNotify('SCSS')))
-			.pipe(sourceMaps.init())
-			.pipe(sassGlob()) /* Первый */
-			.pipe(sass()) /* Второй */
-			.pipe(autoprefixer()) /* После SASS обработка CSS */
-			.pipe(groupMedia())
-			// .pipe(
-			// 	webImagesCSS({
-			// 		mode: 'webp',
-			// 	})
-			// )
-			.pipe(
-				replace(
-					/(['"]?)(\.\.\/)+(img|images|fonts|css|scss|sass|js|files|audio|video)(\/[^\/'"]+(\/))?([^'"]*)\1/gi,
-					'$1$2$3$4$6$1'
-				)
-			)
-			.pipe(csso())
-			.pipe(sourceMaps.write())
-			.pipe(gulp.dest('./docs/css/'))
-	);
+	return gulp
+		.src('./src/scss/*.scss')
+		.pipe(changed('./build/css/'))
+		.pipe(plumber(plumberNotify('SCSS')))
+		.pipe(sourceMaps.init())
+		.pipe(sassGlob())
+		.pipe(sass())
+		.pipe(sourceMaps.write())
+		.pipe(gulp.dest('./docs/css/'));
 });
 
 gulp.task('images:docs', function () {
 	return (
 		gulp
-			.src(['./src/img/**/*', '!./src/img/svgicons/**/*'])
-			.pipe(changed('./docs/img/'))
-			//.pipe(
-			//	imagemin([
-			//		imageminWebp({
-			//			quality: 85,
-			//		}),
-			//	])
-			//)
-			//.pipe(rename({ extname: '.webp' }))
-			.pipe(gulp.dest('./docs/img/'))
-			.pipe(gulp.src('./src/img/**/*'))
+			.src(['./src/img/**/*.jpeg', '!./src/img/svgicons/**/*'])
 			.pipe(changed('./docs/img/'))
 			.pipe(
-				imagemin(
-					[
-						imagemin.gifsicle({ interlaced: true }),
-						imagemin.mozjpeg({ quality: 85, progressive: true }),
-						imagemin.optipng({ optimizationLevel: 5 }),
-					],
-					{ verbose: true }
-				)
+				imagemin([
+					imageminWebp({
+						quality: 85,
+					}),
+				])
 			)
+			.pipe(rename({ extname: '.webp' }))
+			.pipe(gulp.dest('./docs/img/'))
+			.pipe(gulp.src(['./src/img/**/*.jpeg', '!./src/img/svgicons/**/*']))
+			.pipe(changed('./docs/img/'))
+			.pipe(
+				imagemin([
+					imageminAvif({
+						quality: 85,
+					}),
+				])
+			)
+			.pipe(rename({ extname: '.avif' }))
+			.pipe(gulp.src(['./src/img/**/*', '!./src/img/svgicons/**/*']))
+			.pipe(changed('./docs/img/'))
+			.pipe(imagemin({ verbose: true }))
 			.pipe(gulp.dest('./docs/img/'))
 	);
 });
