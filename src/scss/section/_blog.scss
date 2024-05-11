@@ -12,9 +12,6 @@
 
         //}
 }
-//.sample-slider {
-//        width: 70%;
-//}
 .sample-slider .card {
         width: 100%;
         vertical-align: bottom;
@@ -47,6 +44,7 @@
                         min-width: remy(230);
                         height: remy(280);
                         border-radius: remy(6);
+                        flex-grow: 1;
                         overflow: hidden;
                 }
                 @media (max-width: remy(567)){
@@ -62,6 +60,7 @@
         color: var(--dark);
         display: flex;
         flex-direction: column;
+        flex-grow: 1;
         &__title {
                 margin-bottom: remy(24);
                 font-size: remy(24);
