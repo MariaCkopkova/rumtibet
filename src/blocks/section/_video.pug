@@ -3,16 +3,12 @@ mixin video
                 .container
                         .video-wrapper
                                 .video-content
-                                        a.video__link(href="https://www.youtube.com/watch?v=nBCClFb7YoI&pp=ygUT0YLQuNCx0LXRgiDQs9C-0YDRiw%3D%3D")
+                                        a(href="https://www.youtube.com/watch?v=nBCClFb7YoI&pp=ygUT0YLQuNCx0LXRgiDQs9C-0YDRiw%3D%3D" data-youtubeLightbox).video__link.video-mobile
                                                 +svg-stack('play')
                                                 +picture('video2')
-                                        a.video__link.video-link2(href="https://www.youtube.com/watch?v=nBCClFb7YoI&pp=ygUT0YLQuNCx0LXRgiDQs9C-0YDRiw%3D%3D")
+                                        a.video__link.video-link2(href="https://www.youtube.com/watch?v=Ve9fFGukPYY&list=PLxqVhM_kTFCqHbTG938Sf6O6-yJ3gRmAe" data-youtubeLightbox)
                                                 +svg-stack('play')
-                                                +picture('video1')
-                                .video-content--small
-                                        a.video__link(href="https://www.youtube.com/watch?v=nBCClFb7YoI&pp=ygUT0YLQuNCx0LXRgiDQs9C-0YDRiw%3D%3D")
-                                                +svg-stack('play')
-                                                +picture('video1')
+                                                +picture-size('video1', '567')
                                 .video__desc
                                         .h3 о нашем походе
                                         h2.h2 Исследуйте все горные массивы мира вместе с нами

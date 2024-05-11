@@ -1,8 +1,11 @@
 :root {
-        --base: #f5f5f5;
-        --prime: #1a3e3e;
+        --base: #ffffff;
+        --dark: #18121e;
+        --prime: rgb(26, 62, 62);
         --secondary: #f2be22;
-        --section: #d9d9d9;
-        --dark: rgb(24, 18, 30);
         --light: #fdfdfd;
+        --section: #f3f5f4;
+
+        --container-width: 1210px;
+	--container-padding: 15px;
 }

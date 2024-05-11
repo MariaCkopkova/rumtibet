@@ -232,6 +232,12 @@ gulp.task('files:dev', function () {
 		.pipe(changed('./build/files/'))
 		.pipe(gulp.dest('./build/files/'));
 });
+gulp.task('libs:dev', function () {
+	return gulp
+		.src('./src/libs/**/*')
+		.pipe(changed('./build/libs/'))
+		.pipe(gulp.dest('./build/libs/'));
+});
 
 gulp.task('js:dev', function () {
 	return gulp
@@ -261,6 +267,7 @@ gulp.task('watch:dev', function () {
 	gulp.watch("./src/pug/**/*.pug", gulp.parallel("pug:dev"));
 	gulp.watch('./src/img/**/*', gulp.parallel('images:dev'));
 	gulp.watch('./src/files/**/*', gulp.parallel('files:dev'));
+	gulp.watch('./src/libs/**/*', gulp.parallel('libs:dev'));
 	gulp.watch('./src/js/**/*.js', gulp.parallel('js:dev'));
 	gulp.watch(
 		'./src/img/svgicons/*',

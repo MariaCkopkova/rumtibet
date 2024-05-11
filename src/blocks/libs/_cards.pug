@@ -1,8 +1,9 @@
-mixin card(title, text, button)
-        li.card.anim-show
-                //-img.photo(src='./img/' + img + '.webp' alt='Img')
-                +picture('kittens')
-                h5 #{title}
-                p #{text}
-                a(href="#!") 
-                        button.btn #{button}
+mixin card-content(title, text, data)
+        a.card-link(href="#!") 
+                h2.card-link__title #{title}
+                .card-link__text
+                        p #{text}
+                ul.card-link__footer
+                        li 
+                                time(datetime="").article-data #{data}
+                        li читать статью

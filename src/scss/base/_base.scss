@@ -7,6 +7,11 @@ html {
         font-family: NunitoSans;
         font-weight: 700;
         color: var(--dark);
+        background-color: var(--base);
+        //overflow-x: hidden;
+
+        //position: relative;
+        //height: 100%;
 }
 .container {
         max-width: remy(1210);
@@ -19,13 +24,28 @@ html {
 
 picture {
         display: block;
-        max-width: 100%;
+        width: 100%;
         height: auto;
 }
-@media (max-width: remy(576)) {
-        .middle-btn {
-                display: flex;
-                flex-direction: column;
+
+.middle-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @media (max-width: remy(900)) {
                 align-items: center;
         }
+}
+.top-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width: remy(1227)) {
+                align-items: flex-start;
+        }
+}
+.bottom-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 }

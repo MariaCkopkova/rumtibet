@@ -24,9 +24,12 @@
 .h3-light {
         color: var(--light);
         font-family: NunitoSans;
-        font-size: clamp(1.13rem, calc(1.03rem + 0.39vw), 1.5rem);
+        font-size: remy(24);
         font-weight: 700;
         line-height: 1.2;
+        @media (max-width: remy(1227)){
+                font-size: remy(18);
+        }
 }
 .h4 {
         font-size: remy(40);

@@ -10,6 +10,9 @@ html(lang="en")
                 include _head
                 title #{siteTitle}
         body
-                .wrapper
-                        block content
-                include _scripts
+                block content
+                #youtubelightbox.youtubelightbox
+                        .youtubelightbox__centeredchild
+                                .youtubelightbox__videowrapper
+                                        #youtubelightboxPlayer                
+        include _scripts

@@ -12,10 +12,7 @@
         white-space: nowrap;
         transition: 0.3s;
         flex-shrink: 0;
-        //@media (max-width:remy(767)){
-        //        width: 100%;
-        //        min-width: remy(210);
-        //}
+
 }       
 .btn {padding: remy(12) remy(24);}
 .btn--section {padding: remy(16) remy(36);}
@@ -27,18 +24,24 @@
         color: var(--prime);
         font-size: remy(16);
         font-weight: 700;
+        transition: 0.3s;
+        &:hover {
+                background-color: #dce7e7;
+        }
 }
 .btn:hover, .btn--section:hover {
         background-color: #4b7979;
 }
 .img-price {
         padding: remy(8) remy(16);
-        font-size: clamp(1.13rem, calc(1.09rem + 0.13vw), 1.25rem);
+        font-size: remy(20);
         font-weight: 700;
         line-height: remy(24);
         border-radius: 4px;
         background: rgba(255, 255, 255, 0.3);
-        @media (max-width: remy(1200)){
+        color: var(--light);
+        @media (max-width: remy(1227)){
+                font-size: remy(16);
                 padding: remy(6) remy(10);
         }
 }

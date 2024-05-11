@@ -1,61 +1,68 @@
 .popular {
         color: var(--base);
         padding-block: remy(80) remy(100);
+}
+
+.popular-img {
+        position: relative;
+        width: 100%;
+        border-radius: remy(32);
+        overflow: hidden;
+}
+
+.icon-wrapper {
+        padding: remy(4) remy(8);
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        &__img {
-                margin: remy(50);
-                display: flex;
-                gap: remy(20);
-                .img {
-                        position: relative;
-                        //max-width: remy(380);
-                        //height: remy(500);
-                        border-radius: remy(32);
-                        overflow: hidden;
-                        .icon-wrapper {
-                                padding: remy(4) remy(8);
-                                display: flex;
-                                gap: remy(7.4);
-                                position: absolute;
-                                top: remy(56);
-                                right: 0;
-                                color: var(--prime);
-                                border-radius: 4px 0px 0px 4px;
-                                backdrop-filter: blur(4px);
-                                background: rgba(253, 253, 253, 0.4);
-                        }
-                        &__desc {
-                                padding-inline: remy(32);
-                                padding-top: remy(20);
-                                padding-bottom: remy(23);
-                                position: absolute;
-                                width: 100%;
-                                //height: remy(90);
-                                bottom: 0;
-                                display: flex;
-                                justify-content: space-between;
-                                
-                                border-radius: 0 0 remy(32) remy(32);
-                                backdrop-filter: blur(remy(6));
-                                background-color: rgba(255, 255, 255, 0.2);
-                                @media (max-width: remy(1200)){
-                                        align-items: center;
-                                }
-                                @media (max-width: remy(1108)){
-                                        padding-inline: remy(20);
-                                }
-                        }
-                        .img-text {
-                                font-size: remy(14);
-                                font-weight: 400;
-                                line-height: remy(18);
-                                @media (max-width: remy(1200)){
-                                        display: none;
-                                }
-                        }
-                }
+        gap: remy(4);
+        position: absolute;
+        top: remy(50);
+        right: 0;
+        color: var(--prime);
+        border-radius: 4px 0px 0px 4px;
+        backdrop-filter: blur(4px);
+        background: rgba(253, 253, 253, 0.4);
+}
+.img-desc {
+        padding-inline: remy(32);
+        padding-top: remy(20);
+        padding-bottom: remy(23);
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 0 0 remy(32) remy(32);
+        backdrop-filter: blur(remy(6));
+        background-color: rgba(255, 255, 255, 0.2);
+        @media (max-width: remy(1227)) {
+                align-items: center;
+                padding-inline: remy(24);
+        }
+        @media (max-width: remy(1108)) {
+                padding-inline: remy(20);
+                padding-bottom: remy(20);
         }
 }
-.img-content {flex-shrink: 0;}
+.img-text {
+        font-size: remy(14);
+        font-weight: 400;
+        line-height: remy(18);
+        color: var(--light);
+        @media (max-width: remy(1227)) {
+                display: none;
+        }
+}
+
+.swiper {
+        margin: remy(50);
+}
+@media (max-width: remy(585)){
+        .popular-card {
+                width: remy(285);
+        }
+}
+.smooth-transition {
+        -webkit-transition-timing-function: linear !important;
+        -o-transition-timing-function: linear !important;
+        transition-timing-function: linear !important;
+}
