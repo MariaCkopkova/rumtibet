@@ -2,7 +2,8 @@ mixin picture(name)
         picture
                 source(type='image/avif' srcset='./img/' + name + '/' + name + '.avif, ./img/' + name + '/' + 'retina/' + name + '.avif 2x')
                 source(type='image/webp' srcset='./img/' + name + '/' + name + '.webp, ./img/' + name + '/' + 'retina/' + name + '.webp 2x')
-                img(src='./img/' + name + '/' + name + '.jpeg' srcset='./img/' + name + '/' + 'retina/' + name + '.jpeg 2x') 
+                img(src='./img/' + name + '/' + name + '.jpeg' srcset='./img/' + name + '/' + 'retina/' + name + '.jpeg 2x')
+                
 //-mixin picture-size(name)   
 //-        picture
 //-                source(type='image/avif' srcset='./img/' + name + '/small/' + name + '.avif, ./img/' + name + '/small/retina/' + name + '.avif 2x' media='(max-width: 1227px)')

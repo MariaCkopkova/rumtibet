@@ -1,15 +1,25 @@
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
-
 function swiperFunc() {
-	const swiper = new Swiper('.swiper', {
+	const swiper = new Swiper('.popular-slider', {
+		on: {
+			resize: function enableOnlyMobile(swiper) {
+				// Disable the slider when the window width is less than or equal to 960
+				if (840 < window.innerWidth) {
+					swiper.disable()
+					swiper.el.classList.add('-non-slider')
+				} else {
+					swiper.enable()
+					swiper.el.classList.remove('-non-slider')
+				}
+			},
+		},
+
 		direction: 'horizontal',
 		slidesPerView: 1,
-		spaceBetween: 0,
+		spaceBetween: 20,
 		grabCursor: true,
 		a11y: false,
 		freeMode: true,
-		speed: 2000,
+		speed: 3500,
 		loop:true,
 		autoplay: {
 			delay: 0.0,
@@ -23,7 +33,7 @@ function swiperFunc() {
 				grabCursor: true,
 				a11y: false,
 				freeMode: true,
-				speed: 2000,
+				speed: 3500,
 				loop:true,
 				autoplay: {
 					delay: 0.0,
@@ -43,18 +53,6 @@ function swiperFunc() {
 				spaceBetween: 20,
 			}
 		},
-		on: {
-                        resize: function enableOnlyMobile(swiper) {
-                                // Disable the slider when the window width is less than or equal to 960
-                                if (1200 < window.innerWidth) {
-                                        swiper.disable()
-                                        swiper.el.classList.add('-non-slider')
-                                } else {
-                                        swiper.enable()
-                                        swiper.el.classList.remove('-non-slider')
-                                }
-                        },
-                }		
 	});
 }
 export default swiperFunc;

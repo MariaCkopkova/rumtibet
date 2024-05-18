@@ -1,0 +1,45 @@
+mixin galery
+        section.galery
+                .container
+                        .top-wrapper
+                                .h3 фото-отчет
+                                h2.h2 Делимся впечатлениями
+                        .swiper.galery-slider.-non-slider
+                                .swiper-wrapper.smooth-transitions
+                                        .swiper-slide.img1
+                                                .galery-img
+                                                        +picture-size('impression1', '991') 
+                                                        img.svg-zoom(src="./img/zoom.svg", alt="#!")
+                                        .swiper-slide 
+                                                .galery-img
+                                                        +picture('impression2')
+                                                        img.svg-zoom(src="./img/zoom.svg", alt="#!")
+                                        .swiper-slide 
+                                                .galery-img
+                                                        +picture('impression3')
+                                                        img.svg-zoom(src="./img/zoom.svg", alt="#!")
+                                        .swiper-slide 
+                                                .galery-img
+                                                        +picture('impression4')
+                                                        img.svg-zoom(src="./img/zoom.svg", alt="#!")
+                                        .swiper-slide.img5
+                                                .galery-img
+                                                        +picture-size('impression5', '991')
+                                                        img.svg-zoom(src="./img/zoom.svg", alt="#!")
+                                        .swiper-slide 
+                                                .galery-img
+                                                        +picture('impression6')
+                                                        img.svg-zoom(src="./img/zoom.svg", alt="#!")
+                        .bottom-btn
+                                +btn('Наш pinterest', 'btn--section')
+                        .popup
+                                .top-bar
+                                        p.image-name img1
+                                        span.close-btn
+                                .arrow-btn.left-arrow
+                                        +svg('arrow')
+                                .arrow-btn.right-arrow
+                                        +svg('arrow')
+                                img.large-image(src="./img/impression1/retina/impression1.avif", alt="")
+                                h6.index 01
+                                

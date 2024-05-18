@@ -5,6 +5,10 @@ import swiperFunc from "./modules/swiper";
 swiperFunc();
 import blogSwiper from "./modules/blogSwiper";
 blogSwiper();
+import galerySwiper from "./modules/galerySwiper";
+galerySwiper();
+import popUp from "./modules/popup";
+popUp();
 import tibetList from "./helpers/tibetList";
 
 const autoCompleteJS = new autoComplete({

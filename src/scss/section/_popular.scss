@@ -6,10 +6,11 @@
 .popular-img {
         position: relative;
         width: 100%;
-        border-radius: remy(32);
+        height: 100%;
+        border-radius: remy(32) remy(32) remy(32) remy(32);
         overflow: hidden;
+        aspect-ratio: 380/500;
 }
-
 .icon-wrapper {
         padding: remy(4) remy(8);
         display: flex;
@@ -56,13 +57,25 @@
 .swiper {
         margin: remy(50);
 }
-@media (max-width: remy(585)){
+@media (max-width: remy(585)) {
         .popular-card {
                 width: remy(285);
         }
 }
-.smooth-transition {
-        -webkit-transition-timing-function: linear !important;
-        -o-transition-timing-function: linear !important;
-        transition-timing-function: linear !important;
+
+.popular-slider .card {
+        width: 100%;
+        vertical-align: bottom;
+}
+.popular-slider.-non-slider .swiper-wrapper {
+        transform: inherit !important;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:remy(20);
+}
+.popular-slider.-non-slider .swiper-slide {
+        width: inherit !important;
+}
+.popular-slider.-non-slider .swiper-slide-duplicate {
+        display: none;
 }

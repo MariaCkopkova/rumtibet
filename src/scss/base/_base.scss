@@ -8,10 +8,7 @@ html {
         font-weight: 700;
         color: var(--dark);
         background-color: var(--base);
-        //overflow-x: hidden;
-
-        //position: relative;
-        //height: 100%;
+        overflow-x: hidden;
 }
 .container {
         max-width: remy(1210);
@@ -21,7 +18,9 @@ html {
 .main {
         flex-grow: 1;
 }
-
+a {
+        display: inline-block; /* чтобы м.б. делать margin или padding*/
+}
 picture {
         display: block;
         width: 100%;
@@ -48,4 +47,9 @@ picture {
         display: flex;
         flex-direction: column;
         align-items: center;
+}
+.smooth-transition {
+        -webkit-transition-timing-function: linear !important;
+        -o-transition-timing-function: linear !important;
+        transition-timing-function: linear !important;
 }

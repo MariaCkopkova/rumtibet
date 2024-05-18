@@ -1,0 +1,11 @@
+<svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<clipPath id="clip1_188">
+			<rect id="ep:arrow-down" width="20.000000" height="20.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="ep:arrow-down" width="20.000000" height="20.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip1_188)">
+		<path id="Vector" d="M16.24 6.65L10 12.74L3.75 6.65C3.64 6.54 3.49 6.48 3.33 6.48C3.17 6.48 3.02 6.54 2.91 6.65C2.86 6.71 2.82 6.77 2.79 6.84C2.76 6.91 2.74 6.98 2.74 7.06C2.74 7.13 2.76 7.21 2.79 7.28C2.82 7.35 2.86 7.41 2.91 7.47L9.56 13.95C9.68 14.06 9.83 14.12 10 14.12C10.16 14.12 10.31 14.06 10.43 13.95L17.08 7.47C17.13 7.41 17.18 7.35 17.2 7.28C17.23 7.21 17.25 7.13 17.25 7.06C17.25 6.98 17.23 6.91 17.2 6.84C17.18 6.77 17.13 6.7 17.08 6.65C16.97 6.54 16.82 6.48 16.66 6.48C16.5 6.48 16.35 6.54 16.24 6.65L16.24 6.65Z" fill="#FDFDFD" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

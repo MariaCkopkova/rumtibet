@@ -45,3 +45,24 @@
         width: remy(50);
         height: remy(50);
 }
+.icon--arrow {
+        width: remy(20);
+        height: remy(20);
+        fill: #fff;
+}
+.icon--footer-svg {
+        width: remy(10);
+        height: remy(14);
+        fill: #fff;
+        margin-right: remy(4);
+}
+.icon--telegram, .icon--vk, .icon--pinterest, .icon--skype{
+        width: remy(32);
+        height: remy(32);
+        fill: #fff;
+        transition: fill 0.2s ease-in;        
+        &:hover {
+                fill: var(--secondary);
+        }
+}
+

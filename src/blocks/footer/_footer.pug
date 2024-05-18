@@ -1,4 +1,31 @@
 mixin footer
         footer.footer
-                .container
-                        p Footer
+                .footer-top
+                        .container
+                                .footer-top__row
+                                        .footer-contacts
+                                                .footer-title Компания «РумТибет»
+                                                ul.footer-contacts__list
+                                                        li.footer__text
+                                                                p Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney.
+                                                        li.footer-info
+                                                                a(href="mailto:info@domain.com") info@domain.com
+                                                                a(href="tel:71234567890") +7 (123) 456-78-90
+                                                        li.footer-social
+                                                                a(href="#!")
+                                                                        +svg('telegram') 
+                                                                a(href="#!")
+                                                                        +svg('vk') 
+                                                                a(href="#!")
+                                                                        +svg('pinterest') 
+                                                                a(href="#!")
+                                                                        +svg('skype')
+                                        .box
+                                                +footer-menu('Наши услуги', 'Прогулки в горы летом', 'Зимние походы в горы', 'Посещение храмов в горах', 'Экстремальные виды туризма', 'Походы в джунглях Амазонии', 'Поездка в Африку')
+                                                +footer-menu('Важно для путешествий', 'Как собрать в долгий поход?', 'Жизненно важные предметы для похода', 'Медицинская страховка, гарантии безопасности', 'Если вы врач - загляните сюда')
+                .footer-bottom
+                        .container
+                                .footer-bottom__content
+                                        p ИП Константинопольский К.К., 2023
+                                        p Политика обработки персональных данных
+                

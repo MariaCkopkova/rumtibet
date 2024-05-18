@@ -1,0 +1,11 @@
+mixin footer-menu(menuTitle, ...menuLinks)
+        .footer-menu
+                .footer-title #{menuTitle}
+                ul.footer__list
+                        each item in menuLinks
+                                li.footer__item
+                                        a.footer__link(href="#!")
+                                                svg.icon.icon--footer-svg
+                                                        use(xlink:href='./img/svgsprite/sprite.symbol.svg#footer-svg')
+                                                p #{item}
+                                        button.footer-menu--btn new
