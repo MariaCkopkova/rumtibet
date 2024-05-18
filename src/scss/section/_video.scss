@@ -3,12 +3,17 @@
         @media (max-width: remy(576)) {
                 padding-block: remy(50);
         }
-
         &-content {
                 position: relative;
                 flex-shrink: 0;
-                width: remy(530);
-                height: remy(525);
+                aspect-ratio: 480/526;
+                overflow: hidden;
+                width: remy(480);
+                height: remy(526);
+                @media (max-width: remy(600)){
+                        width: remy(358);
+                        height: remy(416);
+                }
         }
         &__link {
                 position: relative;
@@ -16,14 +21,11 @@
                 max-width: remy(350);
                 height: remy(400);
                 border-radius: remy(24);
+                aspect-ratio: 350/400;
                 overflow: hidden;
                 &:hover .icon--play {
                         transform: translate(-50%, -50%) scale(1.2);
                         filter: saturate(1.5);
-                }
-                @media (max-width: remy(567)){
-                        max-width: remy(358);
-                        height: remy(416); 
                 }
         }
         .icon--play {
@@ -37,9 +39,9 @@
                 position: absolute;
                 top: 23%;
                 left: 25%;
-                @media (max-width: remy(576)) {
+                @media (max-width: remy(600)) {
                         top: 0;
-                        left: 18%;
+                        left: 0;
                 }
         }
         &-wrapper {
@@ -64,7 +66,7 @@
                 }
         }
 }
-@media (max-width: remy(576)) {
+@media (max-width: remy(600)) {
         a.video-mobile {
                 display: none;
         }

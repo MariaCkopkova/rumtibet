@@ -129,6 +129,10 @@ li.footer__item:not(:nth-child(5)) {
                 font-size: remy(14);
                 font-weight: 600;
                 line-height: 1.28;
+                @media (max-width: remy(600)){
+                        flex-direction: column;
+                        align-items: center;
+                }
         }
 }
 .footer a,

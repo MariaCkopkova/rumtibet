@@ -5,8 +5,10 @@
 }
 .sample-slider .card {
         width: 100%;
+        height: 100%;
         vertical-align: bottom;
 }
+
 .sample-slider.-non-slider .swiper-wrapper {
         transform: inherit !important;
         display: grid;
@@ -34,7 +36,6 @@
                         min-width: remy(230);
                         min-height: remy(280);
                         border-radius: remy(6);
-                        flex-grow: 1;
                         overflow: hidden;
                 }
                 @media (max-width: remy(567)) {
@@ -50,7 +51,6 @@
         color: var(--dark);
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
         @media (max-width: remy(1200)) {
                 margin-top: 0;
         }
@@ -94,6 +94,12 @@
                 }
         }
 }
+
 .card a {
         cursor: url("../img/cursor.svg"), auto;
+}
+.swiper-slide {
+        @media (max-width: remy(900)){
+                flex-grow: 1;
+        }
 }
