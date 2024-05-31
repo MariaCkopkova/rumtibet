@@ -45,6 +45,11 @@
         width: remy(50);
         height: remy(50);
 }
+.icon--star {
+        width: remy(17);
+        height: remy(17);
+        flex-shrink: 0;
+}
 .icon--arrow {
         width: remy(20);
         height: remy(20);

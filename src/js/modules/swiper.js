@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', swiperFunc);
 function swiperFunc() {
 	const swiper = new Swiper('.popular-slider', {
 		on: {
@@ -58,13 +57,3 @@ function swiperFunc() {
 	});
 }
 export default swiperFunc;
-
-//	loop: true,
-//	effect: "fade",
-//	grabCursor: true,
-//	a11y: false,
-//	freeMode: true,
-//	speed: 2000,
-//	autoplay:{
-//		delay: 0.5,
-//		disableOnInteraction: false,

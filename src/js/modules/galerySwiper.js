@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', reportSwiper);
 function reportSwiper() {
         const swiper = new Swiper('.galery-slider', {
                 on: {
