@@ -18,7 +18,7 @@
 .btn--section {padding: remy(16) remy(36);}
 .form__btn {
         background-color: var(--light);
-        min-width: remy(213);
+        max-width: remy(213);
         height: remy(52);
         border-radius: remy(4);
         color: var(--prime);

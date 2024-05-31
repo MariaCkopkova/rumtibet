@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", mobileNav);
 function mobileNav() {
         const menuToggle = document.querySelector('#menu-toggle');
         const mobileMenu = document.querySelector('#header-menu');

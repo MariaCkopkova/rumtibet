@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,8 +23,9 @@
             <svg class="icon icon--logo">
               <use xlink:href="./img/svgsprite/sprite.symbol.svg#logo"></use>
             </svg></a>
-          <nav class="nav" id="header-menu"><a class="nav-item" href="#!">Главная   </a><a href="#!">Про гида</a><a href="#!">Программа тура</a><a href="#!">Стоимость</a><a href="#!">Блог</a><a href="#!">Контакты</a><a class="nav-btn" href="#!"> 
-              <button class="btn" type="button">Консультация</button></a></nav>
+          <nav class="nav" id="header-menu"><a class="nav-item" href="#!">Главная   </a><a href="#!">Про гида</a><a href="#best">Программа тура</a><a href="#popular">Стоимость</a><a href="#blog">Блог</a><a href="#contacts">Контакты</a>
+            <button class="btn" type="button">Консультация</button>
+          </nav>
           <button class="menu-toggle" id="menu-toggle"><span></span></button>
         </div>
         <div class="header-content">
@@ -34,7 +35,7 @@
           <h2>Насладись <br/>прогулкой в горы<br/>с командой единомышленников</h2>
         </div>
         <div class="header-bottom">
-          <form class="form" action="#">
+          <form class="form" action="#!">
             <label class="form__label">
               <input class="form__input" id="autoComplete" type="text" placeholder="Локации для тура" autocomplete="off"/>
               <svg class="icon icon--arrow-down">
@@ -52,10 +53,9 @@
               <svg class="icon icon--arrow-down">
                 <use href="./img/svgsprite/sprite.symbol.svg#arrow-down"></use>
               </svg><span>Минимум 4 человека</span>
-            </label><a href="#!"> 
-              <button class="form__btn" type="button">Найти программу</button></a>
-          </form><a class="btn-small" href="#!"> 
-            <button class="form__btn" type="button">Найти программу</button></a>
+            </label>
+            <button class="form__btn" type="submit">Найти программу</button>
+          </form>
         </div>
       </div>
     </header>
@@ -69,14 +69,14 @@
                 </svg>
                 <picture>
                   <source type="image/avif" srcset="./img/video2/video2.avif, ./img/video2/retina/video2.avif 2x"/>
-                  <source type="image/webp" srcset="./img/video2/video2.webp, ./img/video2/retina/video2.webp 2x"/><img src="./img/video2/video2.jpeg" srcset="./img/video2/retina/video2.jpeg 2x"/>
+                  <source type="image/webp" srcset="./img/video2/video2.webp, ./img/video2/retina/video2.webp 2x"/><img src="./img/video2/video2.jpeg" srcset="./img/video2/retina/video2.jpeg 2x" alt="Image"/>
                 </picture></a><a class="video__link video-link2" href="https://www.youtube.com/watch?v=Ve9fFGukPYY&amp;list=PLxqVhM_kTFCqHbTG938Sf6O6-yJ3gRmAe" data-youtubeLightbox="data-youtubeLightbox">
                 <svg class="icon icon--play">
                   <use href="./img/svgsprite/stack/svg/sprite.stack.svg#play"></use>
                 </svg>
                 <picture>
                   <source type="image/avif" srcset="./img/video1/video1.avif, ./img/video1/retina/video1.avif 2x"/>
-                  <source type="image/webp" srcset="./img/video1/video1.webp, ./img/video1/retina/video1.webp 2x"/><img src="./img/video1/video1.jpeg" srcset="./img/video1/retina/video1.jpeg 2x"/>
+                  <source type="image/webp" srcset="./img/video1/video1.webp, ./img/video1/retina/video1.webp 2x"/><img src="./img/video1/video1.jpeg" srcset="./img/video1/retina/video1.jpeg 2x" alt="Image"/>
                 </picture></a></div>
             <div class="video__desc">
               <div class="h3">о нашем походе</div>
@@ -91,7 +91,7 @@
           </div>
         </div>
       </section>
-      <section class="best">
+      <section class="best" id="best">
         <div class="container">
           <div class="best-wrapper">
             <div class="best__content">
@@ -141,32 +141,32 @@
               <div class="img">
                 <picture>
                   <source type="image/avif" srcset="./img/best1/best1.avif, ./img/best1/retina/best1.avif 2x"/>
-                  <source type="image/webp" srcset="./img/best1/best1.webp, ./img/best1/retina/best1.webp 2x"/><img src="./img/best1/best1.jpeg" srcset="./img/best1/retina/best1.jpeg 2x"/>
+                  <source type="image/webp" srcset="./img/best1/best1.webp, ./img/best1/retina/best1.webp 2x"/><img src="./img/best1/best1.jpeg" srcset="./img/best1/retina/best1.jpeg 2x" alt="Image"/>
                 </picture>
               </div>
               <div class="img">
                 <picture>
                   <source type="image/avif" srcset="./img/best2/best2.avif, ./img/best2/retina/best2.avif 2x"/>
-                  <source type="image/webp" srcset="./img/best2/best2.webp, ./img/best2/retina/best2.webp 2x"/><img src="./img/best2/best2.jpeg" srcset="./img/best2/retina/best2.jpeg 2x"/>
+                  <source type="image/webp" srcset="./img/best2/best2.webp, ./img/best2/retina/best2.webp 2x"/><img src="./img/best2/best2.jpeg" srcset="./img/best2/retina/best2.jpeg 2x" alt="Image"/>
                 </picture>
               </div>
               <div class="img">
                 <picture>
                   <source type="image/avif" srcset="./img/best3/best3.avif, ./img/best3/retina/best3.avif 2x"/>
-                  <source type="image/webp" srcset="./img/best3/best3.webp, ./img/best3/retina/best3.webp 2x"/><img src="./img/best3/best3.jpeg" srcset="./img/best3/retina/best3.jpeg 2x"/>
+                  <source type="image/webp" srcset="./img/best3/best3.webp, ./img/best3/retina/best3.webp 2x"/><img src="./img/best3/best3.jpeg" srcset="./img/best3/retina/best3.jpeg 2x" alt="Image"/>
                 </picture>
               </div>
               <div class="img">
                 <picture>
                   <source type="image/avif" srcset="./img/best4/best4.avif, ./img/best4/retina/best4.avif 2x"/>
-                  <source type="image/webp" srcset="./img/best4/best4.webp, ./img/best4/retina/best4.webp 2x"/><img src="./img/best4/best4.jpeg" srcset="./img/best4/retina/best4.jpeg 2x"/>
+                  <source type="image/webp" srcset="./img/best4/best4.webp, ./img/best4/retina/best4.webp 2x"/><img src="./img/best4/best4.jpeg" srcset="./img/best4/retina/best4.jpeg 2x" alt="Image"/>
                 </picture>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="popular">
+      <section class="popular" id="popular">
         <div class="container">
           <div class="top-wrapper">
             <div class="h3">по версии отдыхающих</div>
@@ -179,7 +179,7 @@
                   <div class="popular-img">
                     <picture>
                       <source type="image/avif" srcset="./img/popular/popular.avif, ./img/popular/retina/popular.avif 2x"/>
-                      <source type="image/webp" srcset="./img/popular/popular.webp, ./img/popular/retina/popular.webp 2x"/><img src="./img/popular/popular.jpeg" srcset="./img/popular/retina/popular.jpeg 2x"/>
+                      <source type="image/webp" srcset="./img/popular/popular.webp, ./img/popular/retina/popular.webp 2x"/><img src="./img/popular/popular.jpeg" srcset="./img/popular/retina/popular.jpeg 2x" alt="Image"/>
                     </picture>
                   </div>
                   <div class="content-wrapper">
@@ -204,7 +204,7 @@
                   <div class="popular-img">
                     <picture>
                       <source type="image/avif" srcset="./img/popular2/popular2.avif, ./img/popular2/retina/popular2.avif 2x"/>
-                      <source type="image/webp" srcset="./img/popular2/popular2.webp, ./img/popular2/retina/popular2.webp 2x"/><img src="./img/popular2/popular2.jpeg" srcset="./img/popular2/retina/popular2.jpeg 2x"/>
+                      <source type="image/webp" srcset="./img/popular2/popular2.webp, ./img/popular2/retina/popular2.webp 2x"/><img src="./img/popular2/popular2.jpeg" srcset="./img/popular2/retina/popular2.jpeg 2x" alt="Image"/>
                     </picture>
                   </div>
                   <div class="content-wrapper">
@@ -229,7 +229,7 @@
                   <div class="popular-img">
                     <picture>
                       <source type="image/avif" srcset="./img/popular3/popular3.avif, ./img/popular3/retina/popular3.avif 2x"/>
-                      <source type="image/webp" srcset="./img/popular3/popular3.webp, ./img/popular3/retina/popular3.webp 2x"/><img src="./img/popular3/popular3.jpeg" srcset="./img/popular3/retina/popular3.jpeg 2x"/>
+                      <source type="image/webp" srcset="./img/popular3/popular3.webp, ./img/popular3/retina/popular3.webp 2x"/><img src="./img/popular3/popular3.jpeg" srcset="./img/popular3/retina/popular3.jpeg 2x" alt="Image"/>
                     </picture>
                   </div>
                   <div class="content-wrapper">
@@ -256,7 +256,7 @@
           </div>
         </div>
       </section>
-      <section class="blog">
+      <section class="blog" id="blog">
         <div class="container">
           <div class="top-wrapper">
             <div class="h3">делимся впечатлениями</div>
@@ -270,7 +270,7 @@
                     <div class="article__img">
                       <picture>
                         <source type="image/avif" srcset="./img/blog1/blog1.avif, ./img/blog1/retina/blog1.avif 2x"/>
-                        <source type="image/webp" srcset="./img/blog1/blog1.webp, ./img/blog1/retina/blog1.webp 2x"/><img src="./img/blog1/blog1.jpeg" srcset="./img/blog1/retina/blog1.jpeg 2x"/>
+                        <source type="image/webp" srcset="./img/blog1/blog1.webp, ./img/blog1/retina/blog1.webp 2x"/><img src="./img/blog1/blog1.jpeg" srcset="./img/blog1/retina/blog1.jpeg 2x" alt="Image"/>
                       </picture>
                     </div><a class="card-link" href="#!"> 
                       <h2 class="card-link__title">Красивая Италия, какая она в реальности?</h2>
@@ -292,7 +292,7 @@
                     <div class="article__img"> 
                       <picture>
                         <source type="image/avif" srcset="./img/blog2/blog2.avif, ./img/blog2/retina/blog2.avif 2x"/>
-                        <source type="image/webp" srcset="./img/blog2/blog2.webp, ./img/blog2/retina/blog2.webp 2x"/><img src="./img/blog2/blog2.jpeg" srcset="./img/blog2/retina/blog2.jpeg 2x"/>
+                        <source type="image/webp" srcset="./img/blog2/blog2.webp, ./img/blog2/retina/blog2.webp 2x"/><img src="./img/blog2/blog2.jpeg" srcset="./img/blog2/retina/blog2.jpeg 2x" alt="Image"/>
                       </picture>
                     </div><a class="card-link" href="#!"> 
                       <h2 class="card-link__title">Долой сомнения! Весь мир открыт для вас!</h2>
@@ -314,7 +314,7 @@
                     <div class="article__img"> 
                       <picture>
                         <source type="image/avif" srcset="./img/blog3/blog3.avif, ./img/blog3/retina/blog3.avif 2x"/>
-                        <source type="image/webp" srcset="./img/blog3/blog3.webp, ./img/blog3/retina/blog3.webp 2x"/><img src="./img/blog3/blog3.jpeg" srcset="./img/blog3/retina/blog3.jpeg 2x"/>
+                        <source type="image/webp" srcset="./img/blog3/blog3.webp, ./img/blog3/retina/blog3.webp 2x"/><img src="./img/blog3/blog3.jpeg" srcset="./img/blog3/retina/blog3.jpeg 2x" alt="Image"/>
                       </picture>
                     </div><a class="card-link" href="#!"> 
                       <h2 class="card-link__title">Как подготовиться к путешествию в одиночку? </h2>
@@ -336,7 +336,7 @@
                     <div class="article__img"> 
                       <picture>
                         <source type="image/avif" srcset="./img/blog4/blog4.avif, ./img/blog4/retina/blog4.avif 2x"/>
-                        <source type="image/webp" srcset="./img/blog4/blog4.webp, ./img/blog4/retina/blog4.webp 2x"/><img src="./img/blog4/blog4.jpeg" srcset="./img/blog4/retina/blog4.jpeg 2x"/>
+                        <source type="image/webp" srcset="./img/blog4/blog4.webp, ./img/blog4/retina/blog4.webp 2x"/><img src="./img/blog4/blog4.jpeg" srcset="./img/blog4/retina/blog4.jpeg 2x" alt="Image"/>
                       </picture>
                     </div><a class="card-link" href="#!"> 
                       <h2 class="card-link__title">Индия ... летим?</h2>
@@ -374,7 +374,7 @@
                     <source type="image/avif" srcset="./img/impression1/impression1.avif, ./img/impression1/retina/impression1.avif 2x"/>
                     <source type="image/webp" srcset="./img/impression1/small/impression1.webp, ./img/impression1/small/retina/impression1.webp 2x" media="(max-width: 991px)"/>
                     <source type="image/webp" srcset="./img/impression1/impression1.webp, ./img/impression1/retina/impression1.webp 2x"/>
-                    <source type="image/jpeg" srcset="./img/impression1/small/impression1.jpeg, ./img/impression1/small/retina/impression1.jpeg 2x" media="(max-width: 991px)"/><img src="./img/impression1/impression1.jpeg" srcset="./img/impression1/retina/impression1.jpeg 2x"/>
+                    <source type="image/jpeg" srcset="./img/impression1/small/impression1.jpeg, ./img/impression1/small/retina/impression1.jpeg 2x" media="(max-width: 991px)"/><img src="./img/impression1/impression1.jpeg" srcset="./img/impression1/retina/impression1.jpeg 2x" alt="Image"/>
                   </picture><img class="svg-zoom" src="./img/zoom.svg" alt="#!"/>
                 </div>
               </div>
@@ -382,7 +382,7 @@
                 <div class="galery-img">
                   <picture>
                     <source type="image/avif" srcset="./img/impression2/impression2.avif, ./img/impression2/retina/impression2.avif 2x"/>
-                    <source type="image/webp" srcset="./img/impression2/impression2.webp, ./img/impression2/retina/impression2.webp 2x"/><img src="./img/impression2/impression2.jpeg" srcset="./img/impression2/retina/impression2.jpeg 2x"/>
+                    <source type="image/webp" srcset="./img/impression2/impression2.webp, ./img/impression2/retina/impression2.webp 2x"/><img src="./img/impression2/impression2.jpeg" srcset="./img/impression2/retina/impression2.jpeg 2x" alt="Image"/>
                   </picture><img class="svg-zoom" src="./img/zoom.svg" alt="#!"/>
                 </div>
               </div>
@@ -390,7 +390,7 @@
                 <div class="galery-img">
                   <picture>
                     <source type="image/avif" srcset="./img/impression3/impression3.avif, ./img/impression3/retina/impression3.avif 2x"/>
-                    <source type="image/webp" srcset="./img/impression3/impression3.webp, ./img/impression3/retina/impression3.webp 2x"/><img src="./img/impression3/impression3.jpeg" srcset="./img/impression3/retina/impression3.jpeg 2x"/>
+                    <source type="image/webp" srcset="./img/impression3/impression3.webp, ./img/impression3/retina/impression3.webp 2x"/><img src="./img/impression3/impression3.jpeg" srcset="./img/impression3/retina/impression3.jpeg 2x" alt="Image"/>
                   </picture><img class="svg-zoom" src="./img/zoom.svg" alt="#!"/>
                 </div>
               </div>
@@ -398,7 +398,7 @@
                 <div class="galery-img">
                   <picture>
                     <source type="image/avif" srcset="./img/impression4/impression4.avif, ./img/impression4/retina/impression4.avif 2x"/>
-                    <source type="image/webp" srcset="./img/impression4/impression4.webp, ./img/impression4/retina/impression4.webp 2x"/><img src="./img/impression4/impression4.jpeg" srcset="./img/impression4/retina/impression4.jpeg 2x"/>
+                    <source type="image/webp" srcset="./img/impression4/impression4.webp, ./img/impression4/retina/impression4.webp 2x"/><img src="./img/impression4/impression4.jpeg" srcset="./img/impression4/retina/impression4.jpeg 2x" alt="Image"/>
                   </picture><img class="svg-zoom" src="./img/zoom.svg" alt="#!"/>
                 </div>
               </div>
@@ -409,7 +409,7 @@
                     <source type="image/avif" srcset="./img/impression5/impression5.avif, ./img/impression5/retina/impression5.avif 2x"/>
                     <source type="image/webp" srcset="./img/impression5/small/impression5.webp, ./img/impression5/small/retina/impression5.webp 2x" media="(max-width: 991px)"/>
                     <source type="image/webp" srcset="./img/impression5/impression5.webp, ./img/impression5/retina/impression5.webp 2x"/>
-                    <source type="image/jpeg" srcset="./img/impression5/small/impression5.jpeg, ./img/impression5/small/retina/impression5.jpeg 2x" media="(max-width: 991px)"/><img src="./img/impression5/impression5.jpeg" srcset="./img/impression5/retina/impression5.jpeg 2x"/>
+                    <source type="image/jpeg" srcset="./img/impression5/small/impression5.jpeg, ./img/impression5/small/retina/impression5.jpeg 2x" media="(max-width: 991px)"/><img src="./img/impression5/impression5.jpeg" srcset="./img/impression5/retina/impression5.jpeg 2x" alt="Image"/>
                   </picture><img class="svg-zoom" src="./img/zoom.svg" alt="#!"/>
                 </div>
               </div>
@@ -417,7 +417,7 @@
                 <div class="galery-img">
                   <picture>
                     <source type="image/avif" srcset="./img/impression6/impression6.avif, ./img/impression6/retina/impression6.avif 2x"/>
-                    <source type="image/webp" srcset="./img/impression6/impression6.webp, ./img/impression6/retina/impression6.webp 2x"/><img src="./img/impression6/impression6.jpeg" srcset="./img/impression6/retina/impression6.jpeg 2x"/>
+                    <source type="image/webp" srcset="./img/impression6/impression6.webp, ./img/impression6/retina/impression6.webp 2x"/><img src="./img/impression6/impression6.jpeg" srcset="./img/impression6/retina/impression6.jpeg 2x" alt="Image"/>
                   </picture><img class="svg-zoom" src="./img/zoom.svg" alt="#!"/>
                 </div>
               </div>
@@ -455,7 +455,7 @@
               <label class="bottom__label" for="formEmail">Введите e-mail адрес*:</label>
               <input class="bottom__input" type="text" name="email" id="forEmail" placeholder="name@domain.com"/>
               <div class="form-bottom__btn">
-                <button class="btn--section" type="button">Подписаться на новости</button>
+                <button class="btn--section" type="submit">Подписаться на новости</button>
               </div>
               <p class="form-bottom__text">подписываясь на новости, вы автоматически соглашаетесь с условиями обработки персональных данных и правилами рекламных рассылок</p>
             </div>
@@ -463,7 +463,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="footer-top">
         <div class="container">
           <div class="footer-top__row">

@@ -15,11 +15,16 @@
                 column-gap: remy(45);
         }
         @media (max-width: remy(600)){
-                display: none;
+                padding: 0;
+                max-width: remy(213);
         }
+
         &__label {
                 display: grid;
                 gap: remy(5);
+                @media (max-width: remy(600)){
+                        display: none;
+                }
         }
         &__input {
                 display: block;
@@ -42,10 +47,4 @@
                 margin-bottom: remy(15);
         }
 }
-a.btn-small{
-        display: none;
-        @media (max-width: remy(600)){
-                display: block;
-                margin-bottom: remy(40);
-        }
-}
+

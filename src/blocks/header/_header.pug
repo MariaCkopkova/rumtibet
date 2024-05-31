@@ -7,12 +7,11 @@ mixin header
                                 nav.nav(id='header-menu')
                                         a.nav-item(href='#!') Главная   
                                         a(href='#!') Про гида
-                                        a(href='#!') Программа тура
-                                        a(href='#!') Стоимость
-                                        a(href='#!') Блог
-                                        a(href='#!') Контакты
-                                        a.nav-btn(href="#!") 
-                                                +btn('Консультация', 'btn')
+                                        a(href='#best') Программа тура
+                                        a(href='#popular') Стоимость
+                                        a(href='#blog') Блог
+                                        a(href='#contacts') Контакты
+                                        +btn('Консультация', 'btn')
                                 button.menu-toggle(id='menu-toggle')
                                         span
                         .header-content
@@ -20,7 +19,7 @@ mixin header
                         .header-content--small
                                 h2 Насладись #[br]прогулкой в горы#[br]с командой единомышленников
                         .header-bottom
-                                form(action="#").form
+                                form(action="#!").form
                                         label.form__label
                                                 input#autoComplete.form__input(type='text' placeholder='Локации для тура' autocomplete='off')
                                                 svg.icon.icon--arrow-down
@@ -36,8 +35,5 @@ mixin header
                                                 svg.icon.icon--arrow-down
                                                         use(href='./img/svgsprite/sprite.symbol.svg#arrow-down')
                                                 span Минимум 4 человека
-                                        a(href="#!") 
-                                                +btn('Найти программу', 'form__btn')
-                                a.btn-small(href="#!") 
-                                                +btn('Найти программу', 'form__btn')
+                                        +btn-submit('Найти программу', 'form__btn')
                                 

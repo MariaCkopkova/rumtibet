@@ -4,6 +4,9 @@
 mixin btn(text="Button", cls, type='button')
         button(type=`${type}` class= `${cls}`)= text
 
+mixin btn-submit(text="Button", cls, type='submit')
+        button(type=`${type}` class= `${cls}`)= text
+
 //-mixin btn(text="Button", cls='', type='button')
 //-        button.btn(type=`${type}` class= `${cls}`)= text
 //-mixin btn-out(text="Button", cls='', type='button')

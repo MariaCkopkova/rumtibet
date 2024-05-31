@@ -53,7 +53,6 @@
         .nav {
                 display: flex;
                 align-items: center;
-                padding-left: remy(160);
                 gap: remy(24);
 
                 a:not(:last-child) {
@@ -85,9 +84,6 @@
                                 transform: scaleX(1);
                         }
                 }
-                @media (max-width: remy(1350)) {
-                        padding-left: 0;
-                }
         }
 }
 @media (max-width: remy(1148)) {
@@ -105,15 +101,10 @@
                 background-color: var(--prime);
                 flex-direction: column;
                 padding-top: remy(150);
-                .nav-item,
-                .nav-btn {
+                .nav-item {
                         display: none;
                 }
         }
-}
-.nav-btn {
-        margin-left: remy(25);
-        text-decoration: none !important;
 }
 .header-content {
         font-family: NEXT_ART_Bold;
