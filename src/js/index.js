@@ -1,15 +1,16 @@
-import mobileNav from "./modules/mobile";
+
+import mobileNav from "./modules/mobile.js";
 mobileNav();
 import autoComplete from "@tarekraafat/autocomplete.js";
-import swiperFunc from "./modules/swiper";
+import swiperFunc from "./modules/swiper.js";
 swiperFunc();
-import blogSwiper from "./modules/blogSwiper";
+import blogSwiper from "./modules/blogSwiper.js";
 blogSwiper();
-import galerySwiper from "./modules/galerySwiper";
+import galerySwiper from "./modules/galerySwiper.js";
 galerySwiper();
-import popUp from "./modules/popup";
+import popUp from "./modules/popup.js";
 popUp();
-import tibetList from "./helpers/tibetList";
+import tibetList from "./helpers/tibetList.js";
 
 const autoCompleteJS = new autoComplete({
         selector: '#autoComplete',

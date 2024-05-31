@@ -9,86 +9,45 @@ mixin popular
 					.swiper-slide
 						.popular-card
 							.popular-img
-								+picture('popular')
+									+picture('popular')
+							.content-wrapper
 								.icon-wrapper
 									+svg-stack('star')
-									p 4.5
-								a(href="#!") 
-									.img-desc
-										.img-content
-											.h3-light Озеро возле гор
-											.img-text
-												p романтическое приключение
-										+btn('480 $', 'img-price')
+									p 4.5 
+								a.img-content(href="#!")
+									.img-content-wrapper
+										.h3-light Озеро возле гор
+										.img-text
+											p романтическое приключение
+									+btn('480 $', 'img-price')
 					.swiper-slide
 						.popular-card
 							.popular-img
-								+picture('popular2')
+									+picture('popular2')
+							.content-wrapper
 								.icon-wrapper
 									+svg-stack('star')
 									p 4.9
-								a(href="#!") 
-									.img-desc
-										.img-content
-											.h3-light Ночь в горах
-											.img-text
-												p в компании друзей
-										+btn('500 $', 'img-price')
+								a.img-content(href="#!") 
+									.img-content-wrapper
+										.h3-light Ночь в горах
+										.img-text
+											p в компании друзей
+									+btn('500 $', 'img-price')
 					.swiper-slide
 						.popular-card
 							.popular-img
-								+picture('popular3')
+									+picture('popular3')
+							.content-wrapper
 								.icon-wrapper
 									+svg-stack('star')
 									p 5.0
-								a(href="#!")
-									.img-desc
-										.img-content
-											.h3-light Йога в горах
-											.img-text
-												p для тех, кто забоится о себе
-										+btn('230 $', 'img-price')
-					//-.swiper-slide
-					//-	.popular-card
-					//-		.popular-img
-					//-			+picture('popular')
-					//-			.icon-wrapper
-					//-				+svg-stack('star')
-					//-				p 4.5
-					//-			a(href="#!") 
-					//-				.img-desc
-					//-					.img-content
-					//-						.h3-light Озеро возле гор
-					//-						.img-text
-					//-							p романтическое приключение
-					//-					+btn('480 $', 'img-price')
-					//-.swiper-slide
-					//-	.popular-card
-					//-		.popular-img
-					//-			+picture('popular2')
-					//-			.icon-wrapper
-					//-				+svg-stack('star')
-					//-				p 4.9
-					//-			a(href="#!") 
-					//-				.img-desc
-					//-					.img-content
-					//-						.h3-light Ночь в горах
-					//-						.img-text
-					//-							p в компании друзей
-					//-					+btn('500 $', 'img-price')
-					//-.swiper-slide
-						.popular-card
-							.popular-img
-								+picture('popular3')
-								.icon-wrapper
-									+svg-stack('star')
-									p 5.0
-								a(href="#!")
-									.img-desc
-										.img-content
-											.h3-light Йога в горах
-											.img-text
-												p для тех, кто забоится о себе
-										+btn('230 $', 'img-price')
+								a.img-content(href="#!")
+									.img-content-wrapper
+										.h3-light Йога в горах
+										.img-text
+											p для тех, кто забоится о себе
+									+btn('230 $', 'img-price')
+
 			.bottom-btn
 				+btn('Рейтинг направлений', 'btn--section')

@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', blogSwiper);
 function blogSwiper() {
         const swiper = new Swiper('.sample-slider', {
                 on: {

@@ -2,48 +2,52 @@
         color: var(--base);
         padding-block: remy(80) remy(100);
 }
-
+.popular-card {
+        display: flex;
+        //width: remy(380);
+        //height: remy(500);
+}
 .popular-img {
-        position: relative;
+        flex-shrink: 0;
+        display: flex;
         width: 100%;
         height: 100%;
         border-radius: remy(32) remy(32) remy(32) remy(32);
         overflow: hidden;
         aspect-ratio: 380/500;
 }
-.icon-wrapper {
-        padding: remy(4) remy(8);
+.content-wrapper {
+        margin-left: -100%;
         display: flex;
-        gap: remy(4);
-        position: absolute;
-        top: remy(50);
-        right: 0;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+}
+.icon-wrapper {
+        margin-top: remy(50);
+        margin-left: 85%;
+        display: flex;
         color: var(--prime);
+        padding: remy(4) remy(8);
         border-radius: 4px 0px 0px 4px;
         backdrop-filter: blur(4px);
         background: rgba(253, 253, 253, 0.4);
 }
-.img-desc {
-        padding-inline: remy(32);
-        padding-top: remy(20);
-        padding-bottom: remy(23);
-        position: absolute;
+.icon-content-wrapper {display: flex;}
+.img-content {
         width: 100%;
-        bottom: 0;
+        padding: remy(20);
         display: flex;
         justify-content: space-between;
+        column-gap: 10%;
         border-radius: 0 0 remy(32) remy(32);
         backdrop-filter: blur(remy(6));
         background-color: rgba(255, 255, 255, 0.2);
-        @media (max-width: remy(1227)) {
-                align-items: center;
-                padding-inline: remy(24);
-        }
-        @media (max-width: remy(1108)) {
-                padding-inline: remy(20);
-                padding-bottom: remy(20);
-        }
 }
+
+//.img-content-wrapper {
+//        flex: 1;
+//}
 .img-text {
         font-size: remy(14);
         font-weight: 400;
@@ -78,4 +82,8 @@
 }
 .popular-slider.-non-slider .swiper-slide-duplicate {
         display: none;
+}
+.popular-link {
+        width: 100%;
+        height: 100%;
 }

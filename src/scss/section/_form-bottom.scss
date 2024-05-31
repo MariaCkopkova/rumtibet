@@ -62,7 +62,6 @@
         row-gap: remy(8);
         color: var(--dark);
         font-weight: 600;
-        letter-spacing: 0%;
         @media (max-width: remy(900)){row-gap: remy(16);}
         .bottom__label {
                 grid-column: 1/4;
